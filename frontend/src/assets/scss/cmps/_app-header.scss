@@ -1,0 +1,28 @@
+.app-header {
+    background-color: #e91e63e3;
+    color: whitesmoke;
+    font-weight: 600;
+
+    section.container {
+        display: flex;
+        align-items: center;
+        
+        h3 {
+            flex-grow: 1;
+        }
+
+        .user {
+             flex-grow: 1;
+        }
+
+        .back {
+            flex-grow: 1;
+        }
+
+        nav {
+            > a:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}

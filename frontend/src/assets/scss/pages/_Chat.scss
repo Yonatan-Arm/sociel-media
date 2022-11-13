@@ -1,0 +1,121 @@
+.chat{
+  margin-top: 20px;
+  padding: 20px;
+  @include for-mobile-layout {
+ padding: 5px;
+}
+}
+.chat-window {
+    width: 500px;
+    height: 420px;
+    margin: 0 auto;
+    @include for-mobile-layout {
+      width: 80vw;
+      margin-top: 20px;
+      height: 60vh;
+  }
+    form{
+      position: relative;
+      height: rem(25px);
+    }
+    .msg{
+      color: #222;
+      font-weight: 500;
+      font-size: 18px;
+      padding: 3px;
+    }
+  }
+  
+  .chat-window p {
+    margin: 0;
+  }
+  .chat-window .chat-header {
+    height: 45px;
+    background: #263238;
+    position: relative;
+    cursor: pointer;
+  }
+  .chat-window .chat-header p {
+    display: block;
+    padding: 0 1em 0 2em;
+    color: #fff;
+    font-weight: 700;
+    line-height: 45px;
+  
+  }
+  
+  .chat-window .chat-body {
+    height: 100%;
+    border: 1px solid #263238;
+    background: whitesmoke;
+    position: relative;
+  }
+  .chat-window .chat-body .message-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .chat-window .chat-body .message-container::-webkit-scrollbar {
+    display: none;
+  }
+  .chat-window .chat-body .message {
+    height: auto;
+    padding: 10px;
+    display: flex;
+ 
+  }
+  
+  .chat-window .chat-body .message .message-content {
+    width: auto;
+    height: auto;
+    min-height: 40px;
+    max-width: 120px;
+    background-color: #43a047;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  
+
+  }
+  
+  
+.chat-window .chat-footer {
+  height: 35px;
+  border: 1px solid #263238;
+  border-top: none;
+  display: flex;
+}
+
+.chat-window .chat-footer input {
+  height: 100%;
+  border: 0;
+  font-size: 1em;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.chat-window .chat-footer button {
+  border: 0;
+  width: 50px;
+  height: 100%;
+  background: #222;
+  font-size: 16px;
+  color: rgb(245, 239, 239);
+  right: 0px;
+  position: absolute;
+  bottom: 0;
+}
+
+
+.back-btn {
+  width: 25px;
+  cursor: pointer;
+}

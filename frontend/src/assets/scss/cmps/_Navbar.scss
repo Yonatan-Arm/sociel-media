@@ -1,0 +1,84 @@
+
+.navbar {
+    margin-bottom: rem(10px);
+    @include for-mobile-layout {
+      padding: 20px
+    }
+    h3{
+      font-weight: 600;
+        img{
+            margin-right: 4px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .links{
+        gap: 10px;
+        font-family: inherit;
+        font-weight: 650;
+        font-size: rem(18px);
+        a:hover{
+          text-decoration: none;
+        }
+        @include for-mobile-layout {
+            display: none;
+          }
+
+    }
+
+  
+    .mobile-nav {
+      display: none;
+  
+  
+      @include for-mobile-layout {
+        display: flex;
+      }
+      img{
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+      }
+      .mobile-model{
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 85vw;
+        height: 60vh;
+        background:  $clr2;
+        gap: 20px;
+        position: fixed;
+        padding: 25px;
+        z-index: 1000;
+        font-weight: 550;
+        color: #fff;
+        button{
+            right: 2px;
+            top: 2px;
+            position: absolute;
+            border-radius: 6px;
+            background: lightgray;
+            width: rem(26px);
+            height: 25px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+      }
+  
+  
+    }
+
+    .logo{
+      color: lightgray;
+      span{
+        font-size: rem(28px);
+        font-weight: 800;
+        text-shadow: -0.08em 0.03em 0.12em rgba(0,0,0,0.9);
+      }
+      span:not(:first-child){
+        margin-left: rem(-1px);
+      }
+    }
+  
+  }
+  

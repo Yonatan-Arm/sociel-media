@@ -1,0 +1,43 @@
+// Font Sizes
+.sm-font { font-size: rem(14px); }
+.md-font { font-size: rem(20px); }
+.lg-font { font-size: rem(30px); }
+.xl-font { font-size: rem(40px); }
+
+// List
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &>li {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// Positioning
+.flex {
+    display: flex;
+    &.column { flex-direction: column; }
+    &.row { flex-direction: row; }
+    &.justify-center { justify-content: center; }
+    &.align-center { align-items: center; }
+    &.wrap { flex-wrap: wrap; }
+    &.space-between { justify-content: space-between; }
+    &.space-around { justify-content: space-around; }
+    &.auto-center {
+        justify-content: center;
+        align-items: center;
+    }
+    > *.full-grow { flex: 1; }
+}
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+
+.clickable{
+    cursor: pointer;
+}

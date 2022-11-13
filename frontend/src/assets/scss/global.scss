@@ -1,0 +1,46 @@
+// Externals
+
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+
+// Basics
+@import "basics/typography";
+@import "basics/base";
+@import "basics/helpers";
+@import "basics/modals";
+@import "basics/animations";
+
+// Pages
+@import "pages/Login";
+@import "pages/Home";
+@import "pages/Edit";
+@import "pages/Explore";
+@import "pages/Explore";
+@import "pages/Chat";
+
+// Components
+@import "cmps/app-header";
+@import "cmps/Navbar";
+@import "cmps/Preview";
+@import "cmps/List";
+@import "cmps/Loader";
+
+
+.App {
+  padding: 20px 80px;
+  min-height: 100vh;
+  background-image: url('../imgs/bg.png');
+  background-attachment: fixed;
+  color: #222;
+  font-family: system-ui, 'Segoe UI', ;
+
+  @include for-normal-layout {
+    padding: 20px 40px;
+  }
+
+  @include for-mobile-layout {
+    padding: 10px 20px;
+  }
+}
