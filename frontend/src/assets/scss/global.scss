@@ -31,9 +31,10 @@
 .App {
   padding: 20px 80px;
   min-height: 100vh;
-  background-image: url('../imgs/bg.png');
+  // background-image: url('../imgs/bg.png');
+  background-image: url('../imgs/background.jpg');
   background-attachment: fixed;
-  color: #222;
+  color: #fff;
   font-family: system-ui, 'Segoe UI', ;
 
   @include for-normal-layout {
