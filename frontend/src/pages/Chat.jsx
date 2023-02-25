@@ -5,12 +5,16 @@ import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "../hooks/useForm";
 import backBtn from "../assets/imgs/back.svg";
+import { userService } from "../services/userService-fullback.js";
+
+
 
 export default function Chat() {
   const { loggedInUser } = useSelector((state) => state.userModule);
   const { id } = useParams();
   const [currentMessage, handleChange, setCurrentMessage] = useForm('');
   const [messageList, setMessageList] = useState([]);
+  const [receiver, setReceiver] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,6 +28,20 @@ export default function Chat() {
     return () => {
     };
   }, []);
+  
+ 
+  
+  useEffect( () => {
+    const fetchData = async () => {
+      let userReciver = await userService.getById(id)
+      setReceiver(userReciver)
+      }
+      fetchData()
+    return () => {
+      
+    }
+  }, [])
+  
 
   const sendMsg = async (ev) => {
     ev.preventDefault();
@@ -51,7 +69,7 @@ export default function Chat() {
       />
     <div className="chat-window">
         <div className="chat-header">
-          <p>Live Chat</p>
+          <p>Converdstion  with <span> {receiver.name}</span></p>
         </div>
         <div className="chat-body">
           {messageList.map((messageContent) => {

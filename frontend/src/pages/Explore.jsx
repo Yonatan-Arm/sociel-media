@@ -63,7 +63,7 @@ export default function Explore(){
   return (
     <div className="explore">
       <h2>lets make some new friends</h2>
-      <div className=" list">
+      <div className="list flex column jusity-center align-center">
         {contacts.map((contact) => {
           return (
             <div key={contact._id} className="preview">

@@ -29,18 +29,11 @@ export default function Preview({
   const ImgSrc = useMemo(() => getFullDeatails(friend.Img), [friend.Img]);
 
   return (
-    <div className="preview flex column align-center justify-center">
+    <div className="preview flex row align-center space-between">
       <div className="flex row media ">
       <div className="img-contanier">
         <img src={friend.Img} alt="profile-pic" />
       </div>
-      <img
-          className="remove-friend"
-          src={remove}
-          alt="remove"
-          title="remove friend"
-          onClick={(ev) => RemoveFriendFromList(friend._id, ev)}
-        />
        
         </div>
       <span className="friend-name">{friend.name}</span>
@@ -51,9 +44,16 @@ export default function Preview({
           send message
         </Link>
       </div>
+      <img
+          className="remove-friend"
+          src={remove}
+          alt="remove"
+          title="remove friend"
+          onClick={(ev) => RemoveFriendFromList(friend._id, ev)}
+        />
 
       {loggedInUser.isAdmin && (
-        <div className="actions flex space-between">
+        <div className="=actions flex">
           <img
             src={trash}
             alt="trash"

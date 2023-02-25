@@ -4,7 +4,9 @@
     color: #222;
     gap: 20px;
     cursor: pointer;
-    min-height: 200px;
+    min-height: 120px;
+    width: 80%;
+    max-width: 700px;
     background:  $clr3 ;
     box-shadow:
         rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
@@ -13,17 +15,28 @@
     position: relative;
     
     @include for-mobile-layout {
-        max-width: 250px;
+        width: 90%;
+        .img-contanier{
+            img{
+              width: 75px;
+                
+            }
+        }
+    }
+    @include for-mini-layout {
+        width: 100%;
+        gap: 10px;
+      
     }
     .media{
-        position: relative;
-        top: 20px;
+        // top: 20px;
+        position: unset;
         .remove-friend{
-            width: 28px;
-            right: -15px;
-            position: absolute;
-            top: -15px;
-            z-index: 15;
+            // width: 28px;
+            // right: -15px;
+            // position: absolute;
+            // top: -15px;
+            // z-index: 15;
         }
     }
     .img-contanier{
@@ -34,6 +47,9 @@
             border-radius: 50%;
             
         }
+    }
+    .remove-friend{
+        width: 25px;
     }
 
     .friend-name {
@@ -57,13 +73,7 @@
     }
 
     .actions {
-        position: absolute;
-        top: 5px;
-        z-index: 100;
-        width: 100%;
-        height: 35px;
-        align-items: flex-start;
-        padding: 10px;
+       
 
         img {
             width: 18px;
