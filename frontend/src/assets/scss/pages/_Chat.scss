@@ -12,9 +12,9 @@
     max-height: 1000px;
     margin: 0 auto;
     @include for-mobile-layout {
-      width: 80vw;
+      width: 90vw;
       margin-top: 20px;
-      height: 60vh;
+      height: 50vh;
   }
     form{
       position: relative;
