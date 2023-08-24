@@ -1,4 +1,4 @@
-import { contains } from "cheerio/lib/static";
+// import { contains } from "cheerio/lib/static";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -63,7 +63,7 @@ export default function Explore(){
   return (
     <div className="explore">
       <h2>lets make some new friends</h2>
-      <div className="list flex column jusity-center align-center">
+      <div className="list flex row jusity-center align-center">
         {contacts.map((contact) => {
           return (
             <div key={contact._id} className="preview">
